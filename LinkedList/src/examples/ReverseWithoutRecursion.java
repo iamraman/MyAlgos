@@ -15,7 +15,7 @@ public class ReverseWithoutRecursion {
 
 		String input[] = br.readLine().split(" ");
 		
-		LinkedList myList = new LinkedList<String>();
+		LinkedList<Integer> myList = new LinkedList<Integer>();
 		
 		for(String currentWord : input) {
 			myList.insert(currentWord);
