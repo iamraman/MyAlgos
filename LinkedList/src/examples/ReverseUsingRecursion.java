@@ -25,13 +25,13 @@ public class ReverseUsingRecursion {
 		}
 		
 		System.out.println("Original :");
-		myList.display();
+		System.out.println(myList);
 		
 		System.out.println("Reverse : ");
 		
 		myList.setFirst(reverse(myList));
 		
-		myList.display();
+		System.out.println(myList);
 	}
 	
 	static Node reverse(LinkedList myList) {

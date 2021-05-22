@@ -42,6 +42,8 @@ public class LinkedList<Type> {
 		}
 		return null;
 	}
+	
+	// To print the list.
 	@Override
 	public String toString() {
 		
@@ -52,7 +54,7 @@ public class LinkedList<Type> {
 			sb.append(tempNode.getItem()+",");
 			tempNode = tempNode.getNext();
 		}
-		return sb.toString();
+		return sb.substring(0,sb.length()-1);
 	}
 	
 	public Node getFirst() {

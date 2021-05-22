@@ -44,9 +44,8 @@ public class SubListSearch {
 
 			list2.insert(input2[i]);
 		}
-		
-		list1.display();
-		list2.display();
+		System.out.println(list1);
+		System.out.println(list2);
 		boolean answer = checkSublist(list1, list2);
 		
 		System.out.println(answer);

@@ -21,11 +21,11 @@ public class ReverseWithoutRecursion {
 			myList.insert(currentWord);
 		}
 		
-		myList.display();
+		System.out.println(myList);
 		
 		reverseList(myList);
 		
-		myList.display();
+		System.out.println(myList);
 	}
 	
 	public static void reverseList(LinkedList myList) {

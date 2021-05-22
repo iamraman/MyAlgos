@@ -25,7 +25,7 @@ public class RemoveDuplicatesUnsortedList {
 		
 		removeDuplicates( myList );
 		
-		myList.display();
+		System.out.println(myList);
 	}
 
 	public static void removeDuplicates( LinkedList<Integer> myList) {
