@@ -42,16 +42,17 @@ public class LinkedList<Type> {
 		}
 		return null;
 	}
-	
-	public void display() {
+	@Override
+	public String toString() {
 		
+		StringBuilder sb = new StringBuilder("");
 		Node tempNode = first;
 		
 		while( null != tempNode) {
-			System.out.print(tempNode.getItem()+" ");
+			sb.append(tempNode.getItem()+",");
 			tempNode = tempNode.getNext();
 		}
-		System.out.println();
+		return sb.toString();
 	}
 	
 	public Node getFirst() {

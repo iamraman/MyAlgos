@@ -8,12 +8,11 @@ import design.LinkedList;
 
 public class InputList {
 	
+	private static InputStreamReader isr = new InputStreamReader(System.in);
+	private static BufferedReader br = new BufferedReader(isr);
+	
 	public static String[] getList() throws IOException {
-		
-		InputStreamReader isr = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(isr);
-		
+	
 		return 	br.readLine().split(" ");
-
 	}
 }
