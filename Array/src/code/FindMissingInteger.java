@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 
 // If array unsorted and duplicates present? 
 // use 0 based array as hashtable, and mark numbers in the given array as 1 in that range
+// numbers with 0 in hashtable are never seen so answer.
 
 public class FindMissingInteger {
 	
