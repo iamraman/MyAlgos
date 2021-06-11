@@ -16,7 +16,7 @@ public class ReverseStringRecursion {
 			return arg;
 		}
 		
-		return arg.charAt(arg.length()-1) + reverseIt( arg.substring(0,arg.length()-1) );
+		return reverseIt(arg.substring(1)) + arg.charAt(0);
 	}
 
 }
