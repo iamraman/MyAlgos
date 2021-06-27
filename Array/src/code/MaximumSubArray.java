@@ -2,7 +2,7 @@ package code;
 
 public class MaximumSubArray {
 	public static void main(String[] args) {
-		System.out.println( maxSubArrayONKadaneAlgorithm(new int[] {-3,-2,-1,-5,-1}));
+		System.out.println( maxSubArrayON2(new int[] {-3,-2,-1,1,2,-5,-1}));
 	}
 	
 	//Idea is, maximum subarray at ith pos will be S(i-1) + A[i] ie; maximum sum till the previous index + ith ele OR
@@ -12,10 +12,10 @@ public class MaximumSubArray {
 	// if it is not, cmp which is higher - sum(i-1) or A[i].
 	public static int maxSubArrayONKadaneAlgorithm(int[] arr) {
 		
-		int maxCurrent = 0, max = Integer.MIN_VALUE;
+		int maxCurrent =arr[0] , max = arr[0];
 		int n = arr.length;
 		
-		for(int i = 0; i < n; i++ ) {
+		for(int i = 1; i < n; i++ ) {
 			maxCurrent = Math.max(arr[i], maxCurrent+arr[i]);
 			
 			max = Math.max(maxCurrent, max);
@@ -27,15 +27,14 @@ public class MaximumSubArray {
 	// so sum_of_all elements till i = sum of all elements till i-1 + current element at i
 	//
 	public static int maxSubArrayON2(int[] arr) {
-		int ans = 0;
-		int n = arr.length;
 		
-		for(int i = 0 ; i<n; i++) {
-			int sum = 0;
-			for(int size_of_subarray = 0; i+size_of_subarray < n; size_of_subarray++) {
-				
-				sum += arr[i+size_of_subarray];
-				ans = Math.max(sum, ans);
+		int ans = arr[0], maxCurr = arr[0];
+		
+		for(int sub_array_size = 0; sub_array_size < arr.length; sub_array_size++) {
+			maxCurr = 0;
+			for(int i = sub_array_size; i < arr.length; i++) {
+				maxCurr += arr[i];
+				ans = Math.max(ans, maxCurr);
 			}
 		}
 		
