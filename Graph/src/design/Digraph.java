@@ -72,20 +72,20 @@ public class Digraph {
 	}
 	public void bfs(int vertex) {
 		Queue<Integer> myQueue = new LinkedList<Integer>();
-		int dist = 0;
 		marked[vertex] = true;
-		
+
+		int dist = 0;
+		distance[vertex] = 0;
 		myQueue.add(vertex);
 		
 		while(! myQueue.isEmpty()) {
 			int currVertex = myQueue.remove();
-			dist++;															//increment distance as we're going to the next level everytime we remove from queue.
 			ArrayList<Integer> connected = this.mapping.get(currVertex);
 			for(int nextVertex : safe(connected)) {
 				
 				if(!marked[nextVertex]) {
 					
-					distance[nextVertex] = dist;
+					distance[nextVertex] = distance[currVertex]+1;
 					edgeTo[nextVertex] = currVertex;
 					myQueue.add(nextVertex);
 				}

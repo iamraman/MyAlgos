@@ -15,12 +15,14 @@ public class Graph {
 	final int V;
 	boolean[] marked;
 	int[] edgeTo;
+	int[] distance;
 	
 	public Graph(int vertices) {
 		this.V = vertices;
 		mapping = new HashMap< Integer, ArrayList<Integer>>(this.V);
 		marked = new boolean[V+1];
 		edgeTo = new int[V+1];
+		distance = new int[V+1];
 	}
 	
 	public void dfs(int parentVertex) {
@@ -37,27 +39,28 @@ public class Graph {
 	}
 	
 	public void bfs(int vertex) {
-		
-		Queue<Integer> whoIsNext = new LinkedList<>();
-		whoIsNext.add(vertex);
+		Queue<Integer> myQueue = new LinkedList<Integer>();
 		marked[vertex] = true;
+
+		int dist = 0;
+		distance[vertex] = 0;
+		myQueue.add(vertex);
 		
-		while( ! whoIsNext.isEmpty()) {
-			
-			Integer parentVertex = whoIsNext.remove();
-			
-			System.out.print(parentVertex+" ");
-			ArrayList<Integer> currList = this.mapping.get(parentVertex);
-			for (int nextNode : safe(currList)) {
-				if (!marked[nextNode]) {
+		while(! myQueue.isEmpty()) {
+			int currVertex = myQueue.remove();
+			ArrayList<Integer> connected = this.mapping.get(currVertex);
+			for(int nextVertex : safe(connected)) {
+				
+				if(!marked[nextVertex]) {
 					
-					marked[nextNode] = true;
-					whoIsNext.add(nextNode);
-					edgeTo[nextNode] = parentVertex;
+					distance[nextVertex] = distance[currVertex]+1;
+					edgeTo[nextVertex] = currVertex;
+					myQueue.add(nextVertex);
 				}
 			}
 		}
 	}
+	
 	private List<Integer> safe(ArrayList<Integer> arg){
 		return null == arg ? Collections.EMPTY_LIST : arg;
 	}
@@ -97,6 +100,7 @@ public class Graph {
 	
 	public void reset() {
 		Arrays.fill(edgeTo, 0);
+		Arrays.fill(distance, 0);
 		Arrays.fill(marked, false);
 	}
 }
