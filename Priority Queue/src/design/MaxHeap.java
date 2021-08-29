@@ -3,6 +3,11 @@ package design;
 // Max-Heap Implementation
 //Convert it to min-heap with a single change, where?
 
+//https://www.geeksforgeeks.org/max-heap-in-java/
+//Min-heap is simply PriorityQueue<Integer> PQ = new PriorityQueue<Integer>(); //by default it takes natural order so min-heap is default.
+
+//to make it max-heap use:
+//PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder);
 public class MaxHeap {
 	int[] Heap;
 	int size;
