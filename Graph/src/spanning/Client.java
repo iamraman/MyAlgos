@@ -2,8 +2,8 @@ package spanning;
 
 import java.util.List;
 
-import weight.Edge;
-import weight.EdgeWeightedGraph;
+import spanning.design.Edge;
+import spanning.design.EdgeWeightedGraph;
 
 public class Client {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package design;
+package undirected;
 
 import java.util.ArrayList;
 import java.util.Arrays;

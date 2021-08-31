@@ -1,4 +1,4 @@
-package weight;
+package spanning.design;
 
 import java.util.ArrayList;
 import java.util.HashMap;

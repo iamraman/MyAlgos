@@ -1,4 +1,4 @@
-package weight;
+package spanning.design;
 
 public class Edge implements Comparable<Edge>{
 	private int v,w;

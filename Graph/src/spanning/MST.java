@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import weight.Edge;
-import weight.EdgeWeightedGraph;
+import spanning.design.Edge;
+import spanning.design.EdgeWeightedGraph;
 
 //Prim's Algorithm
 //Start with one vertex, say 0
