@@ -39,5 +39,8 @@ public class BasicExample {
 		System.out.println();
 		myGraph.reset();
 		myGraph.bfs(3);
+		
+		myGraph.reset();
+		
 	}
 }

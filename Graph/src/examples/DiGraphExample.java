@@ -22,7 +22,7 @@ public class DiGraphExample {
 		
 		graph.bfs(0);
 		graph.printPath(2);
-//		System.out.println(graph.pathTo(5));
+		System.out.println(graph.pathTo(2));
 //		graph.topologicalSort(0);
 	}
 	

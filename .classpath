@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="Stack/src/|Sorting/src/|Priority Queue/src/|Codechef/src/|Strings/src/|Queue/src/|Array/src/|LinkedList/src/|Recursion/src/|Searching/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="Array/src"/>
+	<classpathentry kind="src" path="Codechef/src"/>
+	<classpathentry kind="src" path="LinkedList/src"/>
+	<classpathentry kind="src" path="Priority Queue/src"/>
+	<classpathentry kind="src" path="Queue/src"/>
+	<classpathentry kind="src" path="Recursion/src"/>
+	<classpathentry kind="src" path="Searching/src"/>
+	<classpathentry kind="src" path="Sorting/src"/>
+	<classpathentry kind="src" path="Stack/src"/>
+	<classpathentry kind="src" path="Strings/src"/>
+	<classpathentry kind="output" path="Array/bin"/>
+</classpath>

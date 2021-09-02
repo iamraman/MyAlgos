@@ -21,7 +21,7 @@ public class LowestCommonAncestorofDeepestLeaves {
 }
 
 
-class Solution {
+class Solution1 {
     public TreeNode lcaDeepestLeaves(TreeNode root) {
       MyNode answer = maxDepth(root,0);
       
