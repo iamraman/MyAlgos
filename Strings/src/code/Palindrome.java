@@ -4,7 +4,7 @@ public class Palindrome {
 	
 	public static void main(String[] args) {
 		
-		String source = "naman";
+		String source = "raman";
 		
 		if( source.equals( reverseString(source)) ) {
 			System.out.println("Palindrome!");
@@ -21,7 +21,7 @@ public class Palindrome {
 			return arg;
 		}
 		
-		return arg.charAt(arg.length()-1) + reverseString(arg.substring(0, arg.length()-1));
+		return reverseString(arg.substring(1))+arg.charAt(0);
 	}
 
 }

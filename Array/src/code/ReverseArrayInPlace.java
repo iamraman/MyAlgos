@@ -4,7 +4,7 @@ public class ReverseArrayInPlace {
 	
 	public static void main(String[] args) {
 		
-		int arr[] = {7,2,6,4};
+		int arr[] = {7,2,6,1,4};
 		int length = arr.length-1;
 		int limit = length/2;
 		

@@ -2,7 +2,7 @@ package code;
 
 public class MaximumSubArray {
 	public static void main(String[] args) {
-		System.out.println( maxSubArrayON2(new int[] {-3,-2,-1,1,2,-5,-1}));
+		System.out.println( maxSubArrayON3(new int[] {-3,-2,-1,1,2,-5,-1}));
 	}
 	
 	//Idea is, maximum subarray at ith pos will be S(i-1) + A[i] ie; maximum sum till the previous index + ith ele OR
@@ -47,7 +47,7 @@ public class MaximumSubArray {
 		for(int sub_array_size = 0; sub_array_size < n; sub_array_size++) {
 			for(int i = 0; i+sub_array_size < n; i++) {
 				int sum = 0;
-				for(int j = i; j<=sub_array_size; j++) {
+				for(int j = i; j<=i+sub_array_size; j++) {
 					sum+=arr[j];
 					ans = Math.max(sum, ans);
 				}

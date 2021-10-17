@@ -36,6 +36,7 @@ public class ShortestPathBuilder {
 			HeapNode current = myPriority.remove();
 			
 			if(! settled.contains(current.vertex) ) {
+				System.out.print(current.vertex+" ");
 				settled.add(current.vertex);				//add this vertex to final list because it's the current minimum from min heap
 				addMinimunNeighbours(current.vertex);
 			}
